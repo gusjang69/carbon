@@ -141,7 +141,7 @@ export default class ImagePicker extends React.Component {
   }
 
   async selectImage(url, { photographer } = {}) {
-    const { dataURL } = await this.context.downloadThumbnailImage(url)
+    const { dataURL } = await this.context.downloadThumbnailImage({ url })
     return this.handleImageChange(url, dataURL, photographer)
   }
 
